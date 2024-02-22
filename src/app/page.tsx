@@ -1,5 +1,3 @@
-// "use client";
-
 import Image from "next/image";
 
 import dog1 from "/public/anastasia-ulyanova-aFqfi1ASUJc-unsplash.jpg";
@@ -12,14 +10,12 @@ import cat4 from "/public/luiza-sayfullina-9giow4jXrzM-unsplash.jpg";
 import parrot from "/public/andrea-lightfoot-ZePrO18ieX4-unsplash.jpg";
 import rabbit1 from "/public/kenny-eliason-ldYjXk8oJ4E-unsplash.jpg";
 import rabbit2 from "/public/katelyn-greer-7beg3V3aHv0-unsplash.jpg";
-// import bg from "/public/scott-webb-UjupleczBOY-unsplash.jpg";
-// import { useSession } from "next-auth/react";
+
 import FrontPageLinks from "@/components/frontPageLinks ";
 import { getServerSession } from "next-auth";
-import { authOptions } from "./api/auth/[...nextauth]/route";
+import authOptions from "./api/auth/[...nextauth]/options";
 
 export default async function Home() {
-  // const { data: session } = useSession();
   const session = await getServerSession(authOptions);
 
   return (

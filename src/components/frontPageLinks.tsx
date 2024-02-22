@@ -3,7 +3,7 @@
 import Link from "next/link";
 import type { Session } from "next-auth";
 import { PetContext } from "@/context/PetContext ";
-import { useEffect, useContext, useState } from "react";
+import { useEffect, useContext } from "react";
 
 const FrontPageLinks = ({ session }: { session: Session | null }) => {
   const breeds = ["dog", "cat", "other"];
